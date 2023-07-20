@@ -119,6 +119,7 @@ export default function App() {
               Programmer's Sanctuary
             </a>
             &nbsp;for FreeCodeCamp course.
+            View it on <a href="https://github.com/Ragudos/random-quote-generator.git">Github</a>.
           </h6>
 
           <section>
