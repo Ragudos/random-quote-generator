@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: 268 52% 9%;
+    --background: 0 0% 100%;
+    --primary: 297 53% 20%;
+    --secondary: 327 53% 90%;
+    --accent: 327 52% 50%;
+}
+
+[data-theme="dark"] {
+    --text: 0 0% 98%;
+    --background: 0 0% 2%;
+    --primary: 297 53% 20%;
+    --secondary: 327 53% 10%;
+    --accent: 327 52% 70%;
+}
+
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--text));
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.flex-justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.flex-justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+
+.container {
+    padding: 0 2rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.primary {
+    color: hsl(var(--primary));
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+button {
+    --bg-opacity: 1;
+    --button-color: transparent;
+    outline: none;
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    background-color: hsl(var(--button-color) / var(--bg-opacity));
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 200ms ease-in-out;
+}
+
+button:disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+
+button:focus-visible {
+    box-shadow: 0 0 2px 2px hsl(var(--accent) / 0.2);
+}
+
+button.primary {
+    --button-color: var(--primary);
+}
+
+html[data-theme="light"] button.primary {
+    color: hsl(var(--background));
+}
+
+button.accent {
+    --button-color: var(--accent);
+}
+
+button.secondary {
+    --button-color: var(--secondary);
+}
+
+button.monochromatic {
+    --button-color: var(--text);
+    color: white;
+}
+
+button.default:hover {
+    --bg-opacity: 0.8;
+}
+
+button.outline {
+    --bg-opacity: 0;
+    border: 1px solid hsl(var(--button-color));
+    color: hsl(var(--text));
+}
+
+button.outline:hover {
+    --bg-opacity: 0.25;
+}
+
+button.small {
+    padding: 0.5rem 1rem;  
+}
+
+button.medium {
+    padding: 0.75rem 1.25rem;
+    height: 3rem;
+}
+
+button.large {
+    padding: 1rem 1.5rem;
+    height: 4rem;
+}
+
+button.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+button.not-round {
+    border-radius: 0rem;
+}
+
+button.somewhat-round {
+    border-radius: 0.25rem;
+}
+
+button.round {
+    border-radius: 1rem;
+}
+
+button.circle {
+    border-radius: 100%;
+}
+
+.main-container {
+    min-height: 30rem;
+    height: 70dvh;
+    gap: 1rem;
+}
+
+.main-container > * {
+    width: clamp(14rem, calc(0.1rem + 85vw), 40rem);
+}
+
+.main-container article {
+    min-height: 15rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid hsl(var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    gap: 1.25rem;
+}
+
+@media (width >= 769px) {
+    .main-container > * {
+        width: 40rem;
+    }
+}
+
+.main-container p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+footer {
+    padding: 1rem 0;
+    border-top: 4px solid hsl(var(--primary));
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+a.share-link {
+    width: 2rem;
+    height: 2rem;
+}
