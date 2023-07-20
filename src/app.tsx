@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { Button } from "./components/button";
 import { useTheme } from "./context/theme-provider";
 import "./styles/globals.css";
