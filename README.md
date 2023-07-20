@@ -8,3 +8,5 @@ Currently, two official plugins are available:
 - Built by [Programmer's Sanctuary](https://youtube.com/@programmers_sanctuary)
 
 - Built using Vite + React
+
+![image](https://github.com/Ragudos/random-quote-generator/assets/133567781/a6f659fc-97ef-4536-9ea5-686c8793f9c0)
