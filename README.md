@@ -2,8 +2,6 @@
 
 This source code is for FreeCodeCamp certification of the Front End Libraries Development
 
-Currently, two official plugins are available:
-
 - See on [Netlify](https://random-quote-generator-aaron.netlify.app/)
 - Built by [Programmer's Sanctuary](https://youtube.com/@programmers_sanctuary)
 
